@@ -41,6 +41,8 @@ interface Position {
   zoom: number;
 }
 
+declare module 'topojson-client';
+
 export default function PoliticalInsights() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [position, setPosition] = useState<Position>({ coordinates: [0, 0], zoom: 1 });
